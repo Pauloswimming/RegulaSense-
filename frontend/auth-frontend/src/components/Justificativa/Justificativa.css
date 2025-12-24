@@ -1,0 +1,227 @@
+main {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .1)
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee
+}
+
+.page-header h1 {
+  color: #4FB860;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px
+}
+
+.page-header p {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto
+}
+
+.disclaimer-box {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  font-size: .95em
+}
+
+.disclaimer-box i {
+  color: #856404;
+  font-size: 1.5em;
+  flex-shrink: 0;
+  margin-top: 2px
+}
+
+/* ====== BLOCO "GERANDO COM IA" ====== */
+.ai-generator {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 16px;
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  background: #f8f9fa;
+  margin-bottom: 24px
+}
+
+.ai-generator .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1C2F40;
+  font-weight: 700
+}
+
+.ai-generator .subtitle {
+  color: #555
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px
+}
+
+.progress {
+  flex: 1;
+  height: 14px;
+  background: #e9ecef;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #3D668B, #4FB860);
+  position: relative
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%, transparent 75%, transparent);
+  background-size: 28px 28px;
+  animation: move 1s linear infinite
+}
+
+@keyframes move {
+  from {
+    background-position: 0 0
+  }
+
+  to {
+    background-position: 28px 0
+  }
+}
+
+.pct {
+  width: 56px;
+  text-align: right;
+  font-variant-numeric: tabular-nums
+}
+
+.ai-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer
+}
+
+.btn.secondary {
+  background: #6c757d;
+  color: #fff
+}
+
+.btn.secondary:hover {
+  background: #5a6268
+}
+
+.hint {
+  font-size: .9em;
+  color: #666
+}
+
+/* ====== ÁREA DE TEXTO / AÇÕES ====== */
+.justification-area {
+  margin-bottom: 30px
+}
+
+.justification-area h2 {
+  color: #3D668B;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px
+}
+
+textarea#justificationText {
+  width: calc(100% - 22px);
+  min-height: 300px;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  resize: vertical
+}
+
+textarea#justificationText:focus {
+  border-color: #3D668B;
+  outline: none;
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.action-buttons {
+  text-align: right;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px
+}
+
+.action-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .3s ease
+}
+
+.copy-button {
+  background: #3D668B !important;
+  color: #fff
+}
+
+.copy-button:hover {
+  background: #1C2F40
+}
+
+.back-button {
+  background: #6c757d !important;
+  ;
+  color: #fff
+}
+
+.back-button:hover {
+  background: #5a6268
+}
+
+.save-button {
+  background: #4FB860 !important;
+  color: #fff
+}
+
+.save-button:hover {
+  background: #1F4926
+}

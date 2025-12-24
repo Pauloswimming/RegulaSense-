@@ -1,0 +1,10 @@
+.app-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Remover 'align-items: center' se o conteúdo deve ocupar 100% de largura */
+    /* align-items: center; */ /* Removido para que header, nav, footer possam ocupar a largura total sem max-width */
+    background-color: transparent; /* Permite que o fundo do body apareça */
+    box-sizing: border-box;
+}

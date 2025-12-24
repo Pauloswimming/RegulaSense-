@@ -1,0 +1,82 @@
+.register-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.register-container h2 {
+    margin-bottom: 10px;
+    color: #3D668B;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.register-container p {
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.register-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #4FB860;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(79, 184, 96, 0.3);
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    background-color: #3e9a50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(79, 184, 96, 0.4);
+}
+
+.register-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.login-link {
+    margin-top: 25px;
+    font-size: 0.95em;
+}
+
+.login-link a {
+    color: #3D668B;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- REGRAS PARA TELAS PEQUENAS (CELULARES) --- */
+@media (max-width: 480px) {
+    .register-container {
+        width: 90%; /* Ocupa 90% da largura da tela */
+        padding: 25px; /* Diminui o espaçamento interno */
+    }
+
+    .register-container h2 {
+        font-size: 1.8em; /* Diminui o tamanho do título */
+    }
+
+    .register-button {
+        padding: 14px;
+        font-size: 1.1em;
+    }
+}

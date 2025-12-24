@@ -1,0 +1,61 @@
+services:
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: users_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+
+  users_microservice:
+    build:
+      context: ./backend/users-microservice
+      dockerfile: Dockerfile
+    container_name: users_django_app
+    command: sh -c "python manage.py makemigrations && python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend/users-microservice:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/users-microservice/.env
+    depends_on:
+      - db
+
+  auth_frontend:
+    build:
+      context: ./frontend/auth-frontend
+      dockerfile: Dockerfile.frontend
+    container_name: auth_react_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/auth-frontend:/app
+      - /app/node_modules
+    environment: {}
+    depends_on:
+      - users_microservice
+  
+  ollama_deepseek:
+    image: ollama/ollama
+    container_name: ollama_service
+    command: serve
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  postgres_data:
+  ollama_data:

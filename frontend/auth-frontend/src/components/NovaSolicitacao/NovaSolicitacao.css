@@ -1,0 +1,320 @@
+.helper {
+    font-size: .9em;
+    color: #555;
+    background: #eef6ff;
+    border-left: 4px solid #3D668B;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-top:20px
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-header h1 {
+    color: #28a745;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-header h1 i {
+    font-size: 1.2em;
+}
+
+.form-header p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.form-section h2 {
+    color: #3D668B;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-top:20px
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 22px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.ai-suggestion-box {
+    background-color: #e6f7ff;
+    border-left: 5px solid #007bff;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-style: italic;
+    color: #004085;
+    font-size: 0.9em;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.ai-suggestion-box i {
+    color: #007bff;
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+.ai-suggestion-box .use-button {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: auto;
+    transition: background-color 0.3s ease;
+}
+
+.ai-suggestion-box .use-button:hover {
+    background-color: #218838;
+}
+
+.form-actions {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.submit-button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.cancel-button {
+    padding: 15px 30px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    color: #777;
+    font-size: 0.85em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f0f2f5;
+}
+
+.form-error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* --- ESTILOS DO TOOLTIP --- */
+.tooltip-container {
+    position: relative; 
+    display: inline-block;
+    cursor: help; 
+    margin-left: 8px; 
+    color: #6c757d; 
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 10; 
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --- NOVOS ESTILOS PARA CAIXAS DE AVISO (ALERTAS) --- */
+
+.avisos-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.aviso-box {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.aviso-box i {
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+/* Cores Dinâmicas */
+.aviso-neutro {
+    order: 3;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+.aviso-amarelo {
+    order: 2;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+.aviso-vermelho {
+    order: 1;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        margin: 10px auto;
+        width: calc(100% - 20px);
+    }
+
+    .form-header h1 {
+        font-size: 2em;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-header p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .submit-button, .cancel-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .form-actions {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

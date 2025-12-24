@@ -1,0 +1,62 @@
+variables:
+  BACKEND_IMAGE: $CI_REGISTRY_IMAGE/users-microservice:latest
+  FRONTEND_IMAGE: $CI_REGISTRY_IMAGE/auth-frontend:latest
+
+stages:
+  - build_and_push
+  - deploy
+
+build_push_backend:
+  stage: build_and_push
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  script:
+    - docker build -t $BACKEND_IMAGE -f ./backend/users-microservice/Dockerfile.prod ./backend/users-microservice
+    - docker push $BACKEND_IMAGE
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+build_push_frontend:
+  stage: build_and_push
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  script:
+    - docker build --build-arg REACT_APP_API_URL=$REACT_APP_API_URL -t $FRONTEND_IMAGE -f ./frontend/auth-frontend/Dockerfile.frontend.prod ./frontend/auth-frontend
+    - docker push $FRONTEND_IMAGE
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+deploy_to_vm:
+  stage: deploy
+  tags:
+    - regulasense-g01
+  script:
+    - docker network create regulasense_network || true
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+    - echo "SECRET_KEY=${SECRET_KEY}" >> .env.prod
+    - echo "POSTGRES_HOST=${POSTGRES_HOST}" >> .env.prod
+    - echo "POSTGRES_DB=${POSTGRES_DB}" >> .env.prod
+    - echo "POSTGRES_USER=${POSTGRES_USER}" >> .env.prod
+    - echo "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}" >> .env.prod
+    - echo "DEBUG=False" >> .env.prod
+    - echo "ALLOWED_HOSTS=${ALLOWED_HOSTS}" >> .env.prod
+    - echo "CORS_ALLOWED_ORIGINS=${CORS_ALLOWED_ORIGINS}" >> .env.prod
+    - echo "OLLAMA_BASE_URL=${OLLAMA_BASE_URL}" >> .env.prod
+    - echo "OLLAMA_MODEL=${OLLAMA_MODEL}" >> .env.prod
+    - echo "OLLAMA_TIMEOUT=${OLLAMA_TIMEOUT}" >> .env.prod
+    - echo "OLLAMA_DEFAULT_SEED=${OLLAMA_DEFAULT_SEED}" >> .env.prod
+    - echo "OLLAMA_DEFAULT_TEMPERATURE=${OLLAMA_DEFAULT_TEMPERATURE}" >> .env.prod
+    - echo "USE_MOCK_DATA=False" >> .env.prod
+    - echo "PROCEDIMENTOS_API_URL=${PROCEDIMENTOS_API_URL}" >> .env.prod
+    - echo "DEVOLUCOES_API_URL=${DEVOLUCOES_API_URL}" >> .env.prod
+    - docker compose -f docker-compose.prod.yml pull
+    - docker compose -f docker-compose.prod.yml up -d --force-recreate --no-build
+    - docker image prune -f
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'

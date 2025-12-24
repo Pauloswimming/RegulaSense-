@@ -1,0 +1,143 @@
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Animação para a posição final */
+    }
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+    color: #3D668B;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.logo-placeholder {
+    margin-bottom: 25px;
+}
+
+.logo-placeholder img {
+    max-width: 160px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #3D668B;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(61, 102, 139, 0.2);
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.links-container a {
+    color: #3D668B;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.links-container a:hover {
+    color: #1C2F40;
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #4FB860;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(79, 184, 96, 0.3);
+}
+
+.login-button:hover {
+    background-color: #3e9a50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(79, 184, 96, 0.4);
+}
+
+.login-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* --- REGRAS PARA TELAS PEQUENAS (CELULARES) --- */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%; /* Ocupa 90% da largura da tela */
+        padding: 25px; /* Diminui o espaçamento interno */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    }
+
+    .login-container h2 {
+        font-size: 1.8em; /* Diminui o tamanho do título */
+    }
+
+    .links-container {
+        font-size: 0.85em; /* Diminui a fonte dos links para caberem melhor */
+    }
+
+    .login-button {
+        padding: 14px;
+        font-size: 1.1em;
+    }
+}

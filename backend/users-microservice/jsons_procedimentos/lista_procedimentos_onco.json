@@ -1,0 +1,390 @@
+{
+    "procs": [
+        {
+            "proc_id": "consulta_em_radioterapia_0701945",
+            "proc_label": "CONSULTA EM RADIOTERAPIA (0701945)",
+            "proc_sisreg": "CONSULTA EM RADIOTERAPIA (0701945) [FISICO]",
+            "NT_id": "nota-tecnica-oncologia_e_radioterapia-1",
+            "NT_label": "Nota Técnica N.º 11/2024 - SES/SAIS/ASCCAN",
+            "fields": [
+                {
+                    "name": "classificacao_risco_vermelha",
+                    "label": "Prioridade 1 - Vermelha:  1. Metástases encefálicas não complicadas (após avaliação pela neurocirurgia), 2. Metástases ósseas não complicadas (ausência de resposta ao uso de medicamentos opióides para controle do dor ou prevenção de risco de fratura), 3. Tratamento com finalidade curativa (tratamento combinado com quimioterapia), 4. Radioterapia curativa e/ou de consolidação em linfomas, plasmocitomas e seminomas, 5. Radioterapia curativa e/ou adjuvante em tumores malignos cerebrais ou de medula espinhal, 6. Pacientes que necessitam de radioterapia exclusiva como tratamento definitivo, exceto câncer de próstata localizado",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4",
+                        "ER5",
+                        "ER6"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 1 - Vermelha"
+                },
+                {
+                    "name": "classificacao_risco_amarela",
+                    "label": "Prioridade 2 - Amarela: 1. Pacientes que necessitam de radioterapia pré-operatória (neoadjuvante) como tratamento inicial, 2. Pacientes que necessitam de radioterapia adjuvante em câncer de cabeça e pescoço, colo uterino e sarcomas.",
+                    "type": "label",
+                    "ER": [
+                        "ER7",
+                        "ER8"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 2 - Amarela"
+                },
+                {
+                    "name": "classificacao_risco_verde",
+                    "label": "Prioridade 3 - Verde: 1. Pacientes que necessitam de radioterapia adjuvante à cirurgia, exceto em casos de câncer de cabeça e pescoço, colo uterino e sarcomas, 2. Pacientes com câncer de próstata que necessitam de radioterapia no tumor primário exclusiva ou concomitante á hormonioterapia, 3. Radioterapia Estereotáxica Fracionada (SBRT) de lesões metastáticas em fígado e pulmão",
+                    "type": "label",
+                    "ER": [
+                        "ER9",
+                        "ER10"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 3 - Verde"
+                },
+                {
+                    "name": "classificacao_risco_azul_fluxo_emergencial",
+                    "label": "Prioridade máxima - Azul: 1. Compressão Medular:=compressao_medular, 2. Síndrome de Compressão da Veia Cava Superior:=sindrome_compressao_veia_cava_superior, 3. Compressão de Via Aérea:=compressao_via_area, 4. Metástases Encefálicas complicadas:=metastases_encefalicas_complicadas, 5. Metástases ósseas complicadas:=metastases_osseas_complicadas, 6. Sangramento Tumoral Grave (necessidade de hemotransfusão):=sangramento_tumoral_grave, 7. Tumores em Pacientes Pediátricos:=tumores_pacientes_pediatricos",
+                    "type": "label",
+                    "ER": [
+                        "ER11",
+                        "ER12",
+                        "ER13",
+                        "ER14",
+                        "ER15",
+                        "ER16",
+                        "ER17"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois são casos elegíveis para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "compressao_medular",
+                    "label": "Pacientes com déficit neurológico completo a menos de 72 horas ou com déficit neurológico incompleto, sem proposta cirúrgica e com exame de imagem que comprove a compressão tumoral e a extensão da lesão. Faz-se necessária uma avaliação prévia pelo grupo da coluna, com a conduta documentada no encaminhamento ou prontuário",
+                    "type": "label",
+                    "ER": [
+                        "ER11"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "sindrome_compressao_veia_cava_superior",
+                    "label": "Pacientes com ingurgitamento de vasos cervicais, estridor, edema de papila ou sintomas neurológicos.",
+                    "type": "label",
+                    "ER": [
+                        "ER12"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "compressao_via_area",
+                    "label": "Pacientes com obstrução sintomática de via aérea por neoplasia, comprovada por imagem e sem proposta cirúrgica documentada para o sítio acometido",
+                    "type": "label",
+                    "ER": [
+                        "ER13"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "metastases_encefalicas_complicadas",
+                    "label": "Pacientes com Síndrome de Hipertensão Intracraniana (cefaléia, náuseas e papiledema) secundária a metástases encefálicas, comprovada por imagem e sem indicação cirúrgica",
+                    "type": "label",
+                    "ER": [
+                        "ER14"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "metastases_osseas_complicadas",
+                    "label": "Pacientes com metástase óssea extensa, comprovada por exame de imagem, com risco elevado de fratura e sem indicação de cirurgia, associado a dor de grande intensidade refratária a opióides",
+                    "type": "label",
+                    "ER": [
+                        "ER15"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "sangramento_tumoral_grave",
+                    "label": "Pacientes com queda aguda de hemoglobina documentada, secundária a sangramento tumoral clinicamente comprovado ou por endoscopia, com necessidade de hemotransfusão. Os pacientes devem ser encaminhados com estabilidade hemodinâmica e sangramento ativo controlado (tamponamento, curativo ou clampagem)",
+                    "type": "label",
+                    "ER": [
+                        "ER16"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "tumores_pacientes_pediatricos",
+                    "label": "Todos os casos de câncer pediátrico com indicação de radioterapia deverão ser classificados como prioridade máxima",
+                    "type": "label",
+                    "ER": [
+                        "ER17"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Fluxo emergencial, pois trata-se de caso elegível para avaliação da radioterapia e inicio de tratamento em prioridade máxima"
+                },
+                {
+                    "name": "criterios_para_encaminhamento",
+                    "label": "Inserir informações clinicas relevantes sobre o caso e justificativa da solicitação",
+                    "type": "textarea",
+                    "default": "Adenocarcinoma bem diferenciado de reto médio rmT3aN0M0 em 20/08/25…",
+                    "ER": "",
+                    "categoria": "",
+                    "hint": "Inserir dados do laudo histopatológico e/ou imunohistoquímica com data, estadiamento do tumor TNM ou FIGO com data, exames complementares com data, quadro clinico atual, tratamentos já realizados (cirurgia, quimioterapia, radioterapia prévia) com data, motivo da indicação da radioterapia e modalidade (adjuvante, neoadjuvante, combinada, curativa, paliativa)."
+                }
+            ]
+        },
+        {
+            "proc_id": "consulta_oncologia_clinica_0701363",
+            "proc_label": "CONSULTA EM ONCOLOGIA CLINICA (0701363)",
+            "proc_sisreg": "CONSULTA EM EM ONCOLOGIA CLINICA (0701363)",
+            "NT_id": "nota-tecnica-oncologia_e_radioterapia-2",
+            "NT_label": "Nota Técnica N.º 16/2024 - SES/SAIS/ASCCAN",
+            "fields": [
+                {
+                    "name": "criterios_obrigatorios_para_encaminhamento",
+                    "label": "Critérios obrigatórios para encaminhamento: 1. Laudo histopatológico e/ou imunohistoquímica da neoplasia maligna invasora, 2. Estadiamento do tumor TMN/FIGO, 3. Avaliação da especialidade cirúrgica responsável pelo CID",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Critérios obrigatórios para que o paciente seja aceito para consulta em oncologia clínica"
+                },
+                {
+                    "name": "criterios_que_impedem_encaminhamento",
+                    "label": "Critérios que impedem o encaminhamento: 1. Pacientes menores de 18 ano, 2. Casos com laudo exclusivamente in situ, exceto se houver componente invasor, 3. Neoplasias hematológicas (CID C81-C85, C88, C90, C91-C96) devem ser encaminhadas para a onco-hematologia",
+                    "type": "label",
+                    "ER": [
+                        "ER5",
+                        "ER6",
+                        "ER7"
+                    ],
+                    "categoria": "Cat2",
+                    "hint": "Condições que impedem o encaminhamento para a consulta em oncologia clínica"
+                },
+                {
+                    "name": "classificacao_risco_vermelha",
+                    "label": "Prioridade 1 - Vermelha: Casos como tumores com tratamento combinado com radioterapia, tumores germinativos, tumores com comportamento agressivo, tratamento neoadjuvante, tumores do SNC pós-cirurgia, continuidade de tratamento iniciado fora da rede, necessidade de troca de terapia, e gestantes",
+                    "type": "label",
+                    "ER": "ER8",
+                    "categoria": "Cat3",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 1 - Vermelha"
+                },
+                {
+                    "name": "classificacao_risco_amarela",
+                    "label": "Prioridade 2 - Amarela: Pacientes em tratamento adjuvante, com cirurgia ou radioterapia já realizada, abrangendo diversos tipos tumorais (ex: mama, cólon, reto, pulmão)",
+                    "type": "label",
+                    "ER": [
+                        "ER9"
+                    ],
+                    "categoria": "Cat3",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 2 - Amarela"
+                },
+                {
+                    "name": "classificacao_risco_verde",
+                    "label": "Prioridade 3 - Verde: Pacientes em hormonioterapia adjuvante exclusiva (próstata e mama in situ), ou com doença metastática/localmente avançada (com algumas exceções)",
+                    "type": "label",
+                    "ER": "ER10",
+                    "categoria": "Cat3",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 3 - Verde"
+                },
+                {
+                    "name": "casos_com_encaminhamentos_diferenciados",
+                    "label": "Encaminhamentos diferenciados: 1. Tumores do ângulo ponto-cerebelar e hepatocarcinoma com diagnóstico por imagem podem ser encaminhados sem histopatológico, 2.Tumores malignos de pele devem ser avaliados previamente por cirurgião da área anatômica topográfica, 3.Pacientes encaminhados para cuidados paliativos exclusivos devem inseridos na fila ONCOLOGIA - CUIDADOS PALIATIVOS (SISREG: 0241023), 4 . Para progressão e reenhcaminhamento após alta da oncologia clínica deve-se realizar nova biópsia guiada por imagem com solicitação fora do SISREG",
+                    "type": "label",
+                    "ER": [
+                        "ER11",
+                        "ER12",
+                        "ER13",
+                        "ER14"
+                    ],
+                    "categoria": "Cat4",
+                    "hint": "Situações clínicas com fluxos ou encaminhamentos diferenciados."
+                },
+                {
+                    "name": "paciente_tratamento_paliativo_exclusivo",
+                    "label": "Pacientes para avaliação de cuidados paliativos exclusivos deverão ser inseridos na fila ONCOLOGIA - CUIDADOS PALIATIVOS (0241023)",
+                    "type": "label",
+                    "ER": "ER15",
+                    "categoria": "Cat4",
+                    "hint": "Pacientes com diagnóstico inicial de metástases ou progressão de doença após tratamento, com performance status inadequado para terapia sistêmica, devem ser encaminhados para tratamento paliativo exclusivo"
+                },
+                {
+                    "name": "laudo_histopatologico_imunohistoquimica",
+                    "label": "Laudo histopatológico e/ou imunohistoquímica com data",
+                    "type": "textarea",
+                    "default": "Paciente XXX portador de laudo histolopatológico com resultado XXX, data XX/XX/XXXX",
+                    "ER": "ER1",
+                    "categoria": "Cat1",
+                    "hint": "Deve haver confirmação de neoplasia maligna invasora por laudo histopatológico e/ou imunohistoquímica com data."
+                },
+                {
+                    "name": "avaliacao_da_especialidade_cirurgica",
+                    "label": "Avaliação da especialidade cirúrgica responsável pelo CID",
+                    "type": "textarea",
+                    "default": "Paciente XXX portador de laudo histolopatológico com resultado XXX, data XX/XX/XXXX. Avaliado pela equipe cirúrgica XXX sendo indicado tratamento, pelo estadiamento XXX, neoadjuvância ou adjuvância por cirurgia XXX realizada em XXX, tratamento combinado (quimioterapia e radioterapia) ou paliativo",
+                    "ER": [
+                        "ER2",
+                        "ER3",
+                        "ER4"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Paciente deve ter sido previamente avaliado pela especialidade cirúrgica da área topográfica relacionada à neoplasia, com estadiamento do turmor conforme sistemas TNM ou FIGO e sugestão de planejamento terapêutico (neoadjuvância, adjuvância, tratamento combinado, sistêmico exclusivo ou paliativo exclusivo)."
+                }
+            ]
+        },
+        {
+            "proc_id": "consulta_oncologia_clinica_cuidados_paliativos_0241023",
+            "proc_label": "CONSULTA EM ONCOLOGIA CLINICA - CUIDADOS PALIATIVOS (0241023)",
+            "proc_sisreg": "CONSULTA EM EM ONCOLOGIA CLINICA - CUIDADOS PALIATIVOS (0241023)",
+            "NT_id": "nota-tecnica-oncologia_e_radioterapia-2",
+            "NT_label": "Nota Técnica N.º 16/2024 - SES/SAIS/ASCCAN",
+            "fields": [
+                {
+                    "name": "paciente_tratamento_paliativo_exclusivo",
+                    "label": "Pacientes para avaliação de cuidados paliativos exclusivos devem ser inseridos na fila ONCOLOGIA CUIDADOS PALIATIVOS (0241023)",
+                    "type": "label",
+                    "ER": "ER13",
+                    "categoria": "Cat4",
+                    "hint": "Pacientes com diagnóstico inicial de metástases ou progressão de doença após tratamento, com performance status inadequado para terapia sistêmica, devem ser encaminhados para tratamento paliativo exclusivo"
+                },
+                {
+                    "name": "criterios_obrigatorios_para_encaminhamento",
+                    "label": "Critérios obrigatórios para encaminhamento: 1. Laudo histopatológico e/ou imunohistoquímica da neoplasia maligna invasora, 2. Estadiamento do tumor TMN/FIGO, 3. Avaliação da especialidade cirúrgica responsável pelo CID",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Critérios obrigatórios para que o paciente seja aceito para consulta em oncologia clínica"
+                },
+                {
+                    "name": "criterios_que _impedem_encaminhamento",
+                    "label": "Critérios que impedem o encaminhamento: 1. Pacientes menores de 18 ano, 2. Casos com laudo exclusivamente in situ, exceto se houver componente invasor, 3. Neoplasias hematológicas (CID C81-C85, C88, C90, C91-C96) devem ser encaminhadas para a onco-hematologia",
+                    "type": "label",
+                    "ER": [
+                        "ER5",
+                        "ER6",
+                        "ER7"
+                    ],
+                    "categoria": "Cat2",
+                    "hint": "Condições que impedem o encaminhamento para a consulta em oncologia clínica"
+                },
+                {
+                    "name": "laudo_histopatologico_imunohistoquimica",
+                    "label": "Laudo histopatológico e/ou imunohistoquímica com data",
+                    "type": "textarea",
+                    "default": "Paciente XXX portador de laudo histolopatológico com resultado XXX, data XX/XX/XXXX",
+                    "ER": "ER1",
+                    "categoria": "Cat1",
+                    "hint": "Deve haver confirmação de neoplasia maligna invasora por laudo histopatológico e/ou imunohistoquímica com data."
+                },
+                {
+                    "name": "avaliacao_da_especialidade_cirurgica",
+                    "label": "Avaliação da especialidade cirúrgica responsável pelo CID",
+                    "type": "textarea",
+                    "default": "Paciente XXX portador de laudo histolopatológico com resultado XXX, data XX/XX/XXXX. Avaliado pela equipe cirúrgica XXX sendo indicado tratamento, pelo estadiamento XXX, neoadjuvância ou adjuvância por cirurgia XXX realizada em XXX, tratamento combinado (quimioterapia e radioterapia) ou paliativo",
+                    "ER": [
+                        "ER2",
+                        "ER3",
+                        "ER4"
+                    ],
+                    "categoria": "Cat1",
+                    "hint": "Paciente deve ter sido previamente avaliado pela especialidade cirúrgica da área topográfica relacionada à neoplasia, com estadiamento do turmor conforme sistemas TNM ou FIGO e sugestão de planejamento terapêutico (neoadjuvância, adjuvância, tratamento combinado, sistêmico exclusivo ou paliativo exclusivo)."
+                }
+            ]
+        },
+        {
+            "proc_id": "consulta_oncologia_clinica_internados_0498181",
+            "proc_label": "CONSULTA EM ONCOLOGIA CLÍNICA - INTERNADOS (0498181)",
+            "proc_sisreg": "CONSULTA EM ONCOLOGIA  CLINICA - INTERNADOS (0498181) [FISICO]",
+            "NT_id": "nota-tecnica-oncologia_e_radioterapia-3",
+            "NT_label": "Nota Técnica N.º 15/2024 - SES/SAIS/ASCCAN",
+            "fields": [
+                {
+                    "name": "encaminhamento_pacientes_internados",
+                    "label": "Pacientes internados nas UPAS e Hospitais Regionais com diagnóstico oncológico e necessidade de atendimento imediato deverão ser encaminhados para o CACON (Hospital de Base - HBDF) ou UNACONS (Hospital Universitário de Brasília - HUB ou Hospital Regional de Taguatinga - HRT)",
+                    "type": "label",
+                    "ER": "ER1",
+                    "Categoria": "Cat1",
+                    "hint": "Uso exclusivo para pacientes internados e com critérios de urgência oncológica, conforme pactuação regional"
+                },
+                {
+                    "name": "criterios_urgencia_oncologica",
+                    "label": "Urgência Oncológica: Hipercalcemia com sintomas, Hiperuricemia, Síndrome de Lise Tumoral, Síndrome de veia cava superior, Síndrome de compressão medular, Metástases ósseas em áreas críticas para fraturas patológicas, Hemorragias oncológicas, Quadro clínico compatível com crise visceral comprometedora à vida:=crise_visceral",
+                    "type": "label",
+                    "ER": "ER2",
+                    "Categoria": "Cat1",
+                    "hint": "Essas situações configuram emergência oncológica e devem ser manejadas imediatamente (prioridade zero), sem regulação ambulatorial."
+                },
+                {
+                    "name": "crise_visceral",
+                    "label": "Urgência Oncológica: Hipercalcemia com sintomas, Hiperuricemia, Síndrome de Lise Tumoral, Síndrome de veia cava superior, Síndrome de compressão medular, Metástases ósseas em áreas críticas para fraturas patológicas, Hemorragias oncológicas, Quadro clínico compatível com crise visceral comprometedora à vida ",
+                    "type": "label",
+                    "ER": "ER2",
+                    "Categoria": "Cat1",
+                    "hint": "Essas situações configuram emergência oncológica e devem ser manejadas imediatamente (prioridade zero), sem regulação ambulatorial."
+                },
+                {
+                    "name": "criterios_obrigatorios_para_encaminhamento",
+                    "label": "1. Laudo histopatológico e/ou imunohistoquímica da neoplasia maligna invasora, 2. Avaliação da especialidade cirúrgica responsável pelo CID",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2"
+                    ],
+                    "categoria": "Cat2",
+                    "hint": "Critérios obrigatórios para que o paciente seja aceito para consulta em oncologia clínica"
+                },
+                {
+                    "name": "criterios_que _impedem_encaminhamento",
+                    "label": "1. Pacientes menores de 18 anos, 2. Casos com laudo exclusivamente in situ, exceto se houver componente invasor, 3. Neoplasias hematológicas (CID C81-C85, C88, C90, C91-C96) devem ser encaminhadas para a onco-hematologia",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3"
+                    ],
+                    "categoria": "Cat3",
+                    "hint": "Condições que impedem o encaminhamento para a consulta em oncologia clínica"
+                },
+                {
+                    "name": "laudo_histopatológico_imunohistoquímica",
+                    "label": "Laudo histopatológico e/ou imunohistoquímica com data",
+                    "type": "textarea",
+                    "default": "Paciente XXX portador de laudo histolopatológico com resultado XXX, data XX/XX/XXXX",
+                    "ER": [
+                        "ER1"
+                    ],
+                    "categoria": "Cat2",
+                    "hint": "Deve haver confirmação de neoplasia maligna invasora por laudo histopatológico e/ou imunohistoquímica com data."
+                },
+                {
+                    "name": "avaliação_da_especialidade_cirurgica",
+                    "label": "Avaliação da especialidade cirúrgica responsável pelo CID",
+                    "type": "textarea",
+                    "default": "Paciente XXX portador de laudo histolopatológico com resultado XXX, data XX/XX/XXXX. Avaliado pela equipe cirúrgica XXX sendo indicado tratamento, pelo estadiamento XXX, neoadjuvância ou adjuvância por cirurgia XXX realizada em XXX, tratamento combinado (quimioterapia e radioterapia) ou paliativo",
+                    "ER": [
+                        "ER2",
+                        "ER3",
+                        "ER4"
+                    ],
+                    "categoria": "Cat2",
+                    "hint": "Paciente deve ter sido previamente avaliado pela especialidade cirúrgica da área topográfica relacionada à neoplasia, com estadiamento do turmor conforme sistemas TNM ou FIGO e sugestão de planejamento terapêutico (neoadjuvância, adjuvância, tratamento combinado, sistêmico exclusivo ou paliativo exclusivo)."
+                }
+            ]
+        }
+    ]
+}

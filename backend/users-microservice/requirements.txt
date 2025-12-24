@@ -1,0 +1,8 @@
+Django
+djangorestframework
+djangorestframework-simplejwt
+psycopg2-binary
+python-decouple
+django-cors-headers # Para lidar com CORS do frontend
+requests
+gunicorn

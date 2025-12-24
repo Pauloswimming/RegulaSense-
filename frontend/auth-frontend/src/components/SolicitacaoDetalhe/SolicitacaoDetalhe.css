@@ -1,0 +1,211 @@
+.solicitacao-detalhe-layout {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Cabeçalho e Navegação (Estilos herdados para consistência) --- */
+.detalhe-header {
+    background-color: #fff;
+    color: #3D668B;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detalhe-header .header-left img {
+    max-width: 150px;
+}
+
+.detalhe-header .user-info {
+    font-size: 0.9em;
+    margin-right: 15px;
+}
+
+.detalhe-header .logout-button {
+    background-color: #8C413E;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.solicitacao-detalhe-layout nav ul {
+    list-style: none;
+    padding: 10px 40px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eee;
+}
+
+.solicitacao-detalhe-layout nav ul li {
+    margin-right: 25px;
+}
+
+.solicitacao-detalhe-layout nav ul li a {
+    text-decoration: none;
+    color: #3D668B;
+    font-weight: 600;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.solicitacao-detalhe-layout nav ul li a.active {
+    color: #1C2F40;
+    border-bottom: 4px solid #1C2F40;
+}
+
+
+/* --- Conteúdo Principal (MAIN) e Estrutura de Detalhes --- */
+.detalhe-main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilo do Hero (Título e Subtítulo) --- */
+.detalhe-hero {
+    text-align: left; /* Mantido left para o protocolo, mas ajustado o título */
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.detalhe-hero h1 {
+    color: #3D668B;
+    font-size: 2.8em; /* Ajustado para tamanho de módulo */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --- Estrutura da Grade de Detalhes (3 Colunas) --- */
+.detalhe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card-detalhe {
+    background-color: #f8f9fa;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detalhe h2 {
+    color: #3D668B;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-item span {
+    font-weight: 400;
+    color: #555;
+    max-width: 60%;
+    text-align: right;
+}
+
+/* Estilos de Status (Cores) */
+.status-tag {
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.status-em-edicao { background-color: #007bff; }
+.status-finalizado { background-color: #28a745; }
+.status-pendente { background-color: #ffc107; }
+
+/* Campos Grandes (Descrição/Justificativa) */
+.large-field {
+    grid-column: span 2; /* Ocupa as duas colunas */
+}
+
+.large-field textarea {
+    width: 100%;
+    min-height: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95em;
+    resize: vertical;
+    background-color: #fff;
+}
+
+/* Botões de Ação */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.cancel-button, .edit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .detalhe-main {
+        padding: 20px;
+        margin: 10px;
+    }
+    .detalhe-grid {
+        grid-template-columns: 1fr; /* Coluna única em mobile */
+    }
+    .large-field {
+        grid-column: span 1;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+    .cancel-button, .edit-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+# Usa uma imagem oficial do Python como base
+FROM python:3.9-slim
+
+# Define o diretório de trabalho no container
+WORKDIR /app
+
+# Define variáveis de ambiente para saída não-bufferizada
+ENV PYTHONUNBUFFERED 1
+
+# Instala dependências do sistema
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    nginx \
+    --no-install-recommends && rm -rf /var/lib/apt/lists/*
+
+# Copia o arquivo de requisitos e instala as dependências Python
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia o restante do código da aplicação
+COPY . .
+
+# Expõe a porta (o servidor de desenvolvimento Django roda na 8000 por padrão)
+EXPOSE 8000
+
+# Comando para rodar a aplicação Django
+# Isso será sobrescrito pelo docker-compose, mas é bom para testes locais
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

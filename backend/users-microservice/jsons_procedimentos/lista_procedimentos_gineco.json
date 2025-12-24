@@ -1,0 +1,825 @@
+{
+    "procs": [
+        {
+            "proc_id": "consulta_ginecologia_uroginecologia_0710797",
+            "proc_label": "CONSULTA EM GINECOLOGIA - UROGINECOLOGIA (0710797)",
+            "proc_sisreg": "CONSULTA EM GINECOLOGIA - UROGINECOLOGIA (0710797)",
+            "NT_id": "nota-tecnica-ginecologia_e_obstetricia-4",
+            "NT_label": "Nota Técnica N.º 11/2023 - SES/SAIS/CATES/DUAEC",
+            "fields": [
+                {
+                    "name": "profissionais_autorizados",
+                    "label": "Profissionais autorizados a solicitar este procedimento: médicos dos ambulatórios especializados da atenção secundária ou médicos dos ambulatórios de ginecologia especializada vinculados às Unidades de Ginecologia e Obstetrícia (UGOs) dos hospitais das regiões de saúde que realizam consultas eletivas em ginecologia",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2"
+                    ],
+                    "categoria": "Categoria1"
+                },
+                {
+                    "name": "criterios_encaminhamento_e_classificacao_risco",
+                    "label": "Critérios clínicos para o encaminhamento e classificação de risco",
+                    "type": "checkbox",
+                    "options": [
+                        "Prolapso genital uterino total (Grau IV) ou vaginal apical - Prioridade 1 Vermelha",
+                        "Prolapso genital uterino parcial (Grau II e III) e/ou de parede vaginal anterior e posterior - Prioridade 2 Amarela",
+                        "Urge-incontinência urinária sem resposta a tratamento medicamentoso por 6 meses - Prioridade 2 Amarela",
+                        "Incontinência urinária de esforço refratária ao tratamento clínico e fisioterápico - Prioridade 2 Amarela",
+                        "Suspeita de cistite intersticial - Prioridade 3 Verde"
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4",
+                        "ER5"
+                    ],
+                    "categoria": "Categoria2",
+                    "hint": "Indique a(s) condição(ões) clínica(s) que justifica(m) o encaminhamento e a classificação de risco da paciente."
+                },
+                {
+                    "name": "propedeutica_minima_ultrassonografia",
+                    "label": "Resultado de ultrassonografia pélvica ou transvaginal",
+                    "type": "textarea",
+                    "ER": "ER2",
+                    "categoria": "Categoria3",
+                    "hint": "Descreva o resultado de USG pélvica ou transvaginal realizada na primeira fase precoce do ciclo."
+                },
+                {
+                    "name": "propedeutica_minima_data_ultrassonografia",
+                    "label": "Data da ultrassonografia",
+                    "type": "date",
+                    "ER": "ER2",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "propedeutica_minima_exames_de_urina",
+                    "label": "Resultado de exame sumário de urina (EAS) recente",
+                    "type": "textarea",
+                    "ER": "ER1",
+                    "categoria": "Categoria3",
+                    "hint": "Descreva o resultado do EAS."
+                },
+                {
+                    "name": "propedeutica_minima_data_eas",
+                    "label": "Data do EAS",
+                    "type": "date",
+                    "ER": "ER1",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "propedeutica_minima_urocultura",
+                    "label": "Resultado de urocultura recente",
+                    "type": "textarea",
+                    "ER": "ER1",
+                    "categoria": "Categoria3",
+                    "hint": "Descreva o resultado do exame de urocultura"
+                },
+                {
+                    "name": "propedeutica_minima_data_urocultura",
+                    "label": "Data da urocultura",
+                    "type": "date",
+                    "ER": "ER1",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "propedeutica_minima_beta-hcg",
+                    "label": "Resultado de Beta-HCG (obrigatório para pacientes no menacme)",
+                    "type": "select",
+                    "options": [
+                        "Positivo",
+                        "Negativo"
+                    ],
+                    "ER": "ER3",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "propedeutica_minima_data_beta-hcg",
+                    "label": "Data do Beta-HCG",
+                    "type": "date",
+                    "ER": "ER3",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "propedeutica_minima_hemograma",
+                    "label": "Resultado de hemograma completo",
+                    "type": "textarea",
+                    "default": "Hematócrito (%), Eritrócitos (milhões/mm^3); Hemoglobina (g/100ml)...",
+                    "ER": "ER4",
+                    "categoria": "Categoria3",
+                    "hint": "Descreva o resultado de hemograma completo"
+                },
+                {
+                    "name": "propedeutica_minima_data_hemograma",
+                    "label": "Data do hemograma completo",
+                    "type": "date",
+                    "ER": "ER4",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "propedeutica_minima_colpocitologia_oncotica",
+                    "label": "Resultado de Colpocitologia Oncótica - CCO (realizado há menos de 1 ano)",
+                    "type": "textarea",
+                    "ER": "ER5",
+                    "categoria": "Categoria3",
+                    "hint": "Descreva o resultado de CCO."
+                },
+                {
+                    "name": "propedeutica_minima_data_cco",
+                    "label": "Data do CCO (realizado há menos de 1 ano)",
+                    "type": "date",
+                    "ER": "ER5",
+                    "categoria": "Categoria3"
+                },
+                {
+                    "name": "conteudo_encaminhamento_sinais_e_sintomas",
+                    "label": "Descrição de sinais e sintomas",
+                    "type": "textarea",
+                    "default": "Ao exame a paciente apresenta...",
+                    "ER": "ER1",
+                    "categoria": "Categoria2",
+                    "hint": "Descrição detalhada dos sinais e sintomas, incluindo hábitos intestinal e urinário, atividade física, atividade laboral e informações relevantes."
+                },
+                {
+                    "name": "conteudo_encaminhamento_cirurgias_previas",
+                    "label": "Relatórios de cirurgias prévias",
+                    "type": "textarea",
+                    "default": "Paciente realizou cirurgia prévia de...",
+                    "ER": "ER2",
+                    "categoria": "Categoria4",
+                    "hint": "Relatórios de procedimentos realizados, como laparotomia ou laparoscopia, se houver."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exame_fisico",
+                    "label": "Exame físico geral e ginecológico completo",
+                    "type": "textarea",
+                    "default": "Ao exame físico, ...",
+                    "ER": "ER3",
+                    "categoria": "Categoria4",
+                    "hint": "Inclui exame da genitália, exame especular, toque vaginal e exame das mamas."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exame_pelvico",
+                    "label": "Descrição do exame pélvico",
+                    "type": "textarea",
+                    "default": "No exame pelvico, verificou-se ...",
+                    "ER": "ER4",
+                    "categoria": "Categoria4",
+                    "hint": "Descreva principalmente a presença e grau do prolapso genital."
+                },
+                {
+                    "name": "conteudo_encaminhamento_fase_reprodutiva",
+                    "label": "Fase reprodutiva da mulher",
+                    "type": "select",
+                    "options": [
+                        "Menacme",
+                        "Perimenopausa",
+                        "Pós-menopausa"
+                    ],
+                    "ER": "ER5",
+                    "categoria": "Categoria4"
+                },
+                {
+                    "name": "conteudo_encaminhamento_tratamentos_incontinencia_urinaria",
+                    "label": "Tratamentos em uso ou já realizados para incontinência urinária",
+                    "type": "textarea",
+                    "default": "Para tratamento de incontinência urinária, paciente realiza uso de..., na dose de..., durante...",
+                    "ER": "ER7",
+                    "categoria": "Categoria4",
+                    "hint": "Incluir posologia, tempo de uso e resposta ao tratamento."
+                },
+                {
+                    "name": "conteudo_encaminhamento_outros_medicamentos_em_uso",
+                    "label": "Outros medicamentos em uso que afetem a continência urinária",
+                    "type": "textarea",
+                    "default": "Paciente em uso de...",
+                    "ER": "ER8",
+                    "categoria": "Categoria4",
+                    "hint": "Listar todos os fármacos relevantes"
+                }
+            ],
+            "ers": [
+                {
+                    "Nome": "Tratamentos em uso ou já realizados para incontinência urinária",
+                    "Descricao": "Incluir posologia, tempo de uso e resposta ao tratamento.",
+                    "id": 17,
+                    "categoria": {
+                    "Nome": "Conteúdo descritivo mínimo",
+                    "Descricao": "Informações obrigatórias no encaminhamento.",
+                    "id": 4
+                    }
+                },
+                {
+                    "Nome": "Prolapso genital uterino total (Grau IV) ou vaginal apical",
+                    "Descricao": "Encaminhamento classificado como Prioridade 1 - Vermelha.",
+                    "id": 3,
+                    "categoria": {
+                    "Nome": "Condições clínicas prioritárias",
+                    "Descricao": "Critérios que definem a prioridade de encaminhamento para consulta em Uroginecologia.",
+                    "id": 2
+                    }
+                },
+                {
+                    "Nome": "Ultrassonografia pélvica ou transvaginal",
+                    "Descricao": "Realizada na primeira fase precoce do ciclo, com data.",
+                    "id": 8,
+                    "categoria": {
+                    "Nome": "Propedêutica mínima",
+                    "Descricao": "Exames complementares obrigatórios para o encaminhamento.",
+                    "id": 3
+                    }
+                },
+                {
+                    "Nome": "Prolapso genital uterino parcial (Grau II e III) e/ou de parede vaginal anterior e posterior",
+                    "Descricao": "Encaminhamento classificado como Prioridade 2 - Amarela.",
+                    "id": 4,
+                    "categoria": {
+                    "Nome": "Condições clínicas prioritárias",
+                    "Descricao": "Critérios que definem a prioridade de encaminhamento para consulta em Uroginecologia.",
+                    "id": 2
+                    }
+                },
+                {
+                    "Nome": "Relatórios de cirurgias prévias",
+                    "Descricao": "Seja laparotomia ou laparoscopia, caso realizados.",
+                    "id": 13,
+                    "categoria": {
+                    "Nome": "Conteúdo descritivo mínimo",
+                    "Descricao": "Informações obrigatórias no encaminhamento.",
+                    "id": 4
+                    }
+                },
+                {
+                    "Nome": "Exame sumário de urina (EAS) e urocultura",
+                    "Descricao": "Com data recente.",
+                    "id": 9,
+                    "categoria": {
+                    "Nome": "Propedêutica mínima",
+                    "Descricao": "Exames complementares obrigatórios para o encaminhamento.",
+                    "id": 3
+                    }
+                },
+                {
+                    "Nome": "Urge-incontinência urinária sem resposta a tratamento medicamentoso por 6 meses",
+                    "Descricao": "Encaminhamento classificado como Prioridade 2 - Amarela.",
+                    "id": 5,
+                    "categoria": {
+                    "Nome": "Condições clínicas prioritárias",
+                    "Descricao": "Critérios que definem a prioridade de encaminhamento para consulta em Uroginecologia.",
+                    "id": 2
+                    }
+                },
+                {
+                    "Nome": "Medicamentos em uso que afetem a continência urinária",
+                    "Descricao": "Listar todos os fármacos relevantes.",
+                    "id": 18,
+                    "categoria": {
+                    "Nome": "Conteúdo descritivo mínimo",
+                    "Descricao": "Informações obrigatórias no encaminhamento.",
+                    "id": 4
+                    }
+                },
+                {
+                    "Nome": "Exame físico geral e ginecológico completo",
+                    "Descricao": "Inclui exame da genitália, exame especular, toque vaginal e exame das mamas.",
+                    "id": 14,
+                    "categoria": {
+                    "Nome": "Conteúdo descritivo mínimo",
+                    "Descricao": "Informações obrigatórias no encaminhamento.",
+                    "id": 4
+                    }
+                },
+                {
+                    "Nome": "Médicos dos ambulatórios de ginecologia especializada vinculados às UGOs",
+                    "Descricao": "Médicos das Unidades de Ginecologia e Obstetrícia dos hospitais das regiões de saúde que realizam consultas eletivas em ginecologia.",
+                    "id": 2,
+                    "categoria": {
+                    "Nome": "Profissionais habilitados para solicitação",
+                    "Descricao": "Profissionais que podem solicitar consultas reguladas em Panorama 3 no SISREG.",
+                    "id": 1
+                    }
+                },
+                {
+                    "Nome": "Médicos dos ambulatórios especializados da atenção secundária",
+                    "Descricao": "Inclui médicos de policlínicas e hospitais que realizam consultas em ginecologia.",
+                    "id": 1,
+                    "categoria": {
+                    "Nome": "Profissionais habilitados para solicitação",
+                    "Descricao": "Profissionais que podem solicitar consultas reguladas em Panorama 3 no SISREG.",
+                    "id": 1
+                    }
+                },
+                {
+                    "Nome": "Beta-HCG",
+                    "Descricao": "Teste imunológico para gravidez em pacientes no menacme, com data.",
+                    "id": 10,
+                    "categoria": {
+                    "Nome": "Propedêutica mínima",
+                    "Descricao": "Exames complementares obrigatórios para o encaminhamento.",
+                    "id": 3
+                    }
+                },
+                {
+                    "Nome": "Incontinência urinária de esforço refratária ao tratamento clínico e fisioterápico",
+                    "Descricao": "Inclui exercícios do assoalho pélvico, treinamento vesical, estrogênio tópico na pós-menopausa e mudanças de estilo de vida, sem resposta após 6 meses. Classificada como Prioridade 2 - Amarela.",
+                    "id": 6,
+                    "categoria": {
+                    "Nome": "Condições clínicas prioritárias",
+                    "Descricao": "Critérios que definem a prioridade de encaminhamento para consulta em Uroginecologia.",
+                    "id": 2
+                    }
+                },
+                {
+                    "Nome": "Descrição do exame pélvico",
+                    "Descricao": "Ênfase na presença e grau do prolapso genital.",
+                    "id": 15,
+                    "categoria": {
+                    "Nome": "Conteúdo descritivo mínimo",
+                    "Descricao": "Informações obrigatórias no encaminhamento.",
+                    "id": 4
+                    }
+                },
+                {
+                    "Nome": "Hemograma completo",
+                    "Descricao": "Com data recente.",
+                    "id": 11,
+                    "categoria": {
+                    "Nome": "Propedêutica mínima",
+                    "Descricao": "Exames complementares obrigatórios para o encaminhamento.",
+                    "id": 3
+                    }
+                },
+                {
+                    "Nome": "Suspeita de cistite intersticial",
+                    "Descricao": "Caracterizada por frequência miccional \u003E 7 vezes/dia, urgência urinária, noctúria, disúria, dor pélvica/perineal sem infecção ou neoplasia vesical e com hematúria. Classificada como Prioridade 3 - Verde.",
+                    "id": 7,
+                    "categoria": {
+                    "Nome": "Condições clínicas prioritárias",
+                    "Descricao": "Critérios que definem a prioridade de encaminhamento para consulta em Uroginecologia.",
+                    "id": 2
+                    }
+                },
+                {
+                    "Nome": "Descrição da fase reprodutiva",
+                    "Descricao": "Especificar se menacme, perimenopausa ou pós-menopausa.",
+                    "id": 16,
+                    "categoria": {
+                    "Nome": "Conteúdo descritivo mínimo",
+                    "Descricao": "Informações obrigatórias no encaminhamento.",
+                    "id": 4
+                    }
+                },
+                {
+                    "Nome": "Colpocitologia Oncótica (CCO)",
+                    "Descricao": "Preventivo realizado há menos de 1 ano.",
+                    "id": 12,
+                    "categoria": {
+                    "Nome": "Propedêutica mínima",
+                    "Descricao": "Exames complementares obrigatórios para o encaminhamento.",
+                    "id": 3
+                    }
+                }
+            ]
+        },
+        {
+            "proc_id": "consulta_ginecologia_infanto_puberal_0701681",
+            "proc_label": "CONSULTA EM GINECOLOGIA - INFANTO PUBERAL (0701681)",
+            "proc_sisreg": "CONSULTA EM GINECOLOGIA - INFANTO PUBERAL (0701681)",
+            "NT_id": "nota-tecnica-ginecologia_e_obstetricia-4",
+            "NT_label": "Nota Técnica N.º 11/2023 - SES/SAIS/CATES/DUAEC",
+            "fields": [
+                {
+                    "name": "profissionais_autorizados",
+                    "label": "Profissionais autorizados a solicitar este procedimento: médicos dos ambulatórios especializados da atenção secundária ou médicos dos ambulatórios de ginecologia especializada vinculados às Unidades de Ginecologia e Obstetrícia (UGOs) dos hospitais das regiões de saúde que realizam consultas eletivas em ginecologia.",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2"
+                    ],
+                    "categoria": "Categoria1"
+                },
+                {
+                    "name": "criterios_encaminhamento_e_classificacao_risco",
+                    "label": "Critérios clínicos para o encaminhamento e classificação de risco",
+                    "type": "checkbox",
+                    "options": [
+                        "Prioridade 1 Vermelha - Desenvolvimento de mamas e/ou sangramento genital em meninas com até 8 anos, 11 meses e 29 dias",
+                        "Prioridade 1 Vermelha - Tumor ginecológico (ovariano, uterino, vaginal, vulvar) em meninas de 0 a 19 anos",
+                        "Prioridade 1 Vermelha - Pelos pubianos e/ou odor axilar em meninas com até 7 anos, 11 meses e 29 dias",
+                        "Prioridade 1 Vermelha - Sangramento genital em meninas sem desenvolvimento de caracteres sexuais secundários",
+                        "Prioridade 2 Amarela - Adolescentes com infecção sexualmente transmissível (IST), exceto condilomatose e herpes (que devem ser conduzidas na atenção primária",
+                        "Prioridade 2 Amarela - Adolescentes em situação de vulnerabilidade social ou doenças psiquiátricas com queixas ginecológicas",
+                        "Prioridade 2 Amarela - Contracepção em adolescentes com comorbidades",
+                        "Prioridade 2 Amarela - Meninas portadoras de necessidades especiais após a menarca",
+                        "Prioridade 2 Amarela - ADS/DDS (alterações do desenvolvimento sexual, genitália ambígua, intersexo) e malformações müllerianas",
+                        "Prioridade 3 Verde - Dismenorreia não responsiva a AINE e antiespasmódicos em meninas < 19 anos",
+                        "Prioridade 3 Verde - Síndrome dos ovários policísticos (SOP) ou outras alterações androgênicas em meninas < 19 anos",
+                        "Prioridade 3 Verde - Sinéquia de pequenos lábios OU prolapso de uretra não responsivas ao estrogênio tópico por 30 dias, descartada vulvovaginite e necessidade de tratamento cirúrgico",
+                        "Prioridade 3 Verde - Vulvovaginite persistente ou recorrente"
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4",
+                        "ER5",
+                        "ER6",
+                        "ER7",
+                        "ER8",
+                        "ER9",
+                        "ER10",
+                        "ER11",
+                        "ER12",
+                        "ER13"
+                    ],
+                    "categoria": "Categoria2",
+                    "hint": "Indique a(s) condição(ões) clínica(s) que justifica(m) o encaminhamento e a classificação de risco da paciente."
+                },
+                {
+                    "name": "propedeutica_minima_desenvolvimento_mamas_ou_sangramento genital",
+                    "label": "Desenvolvimento de mamas e/ou sangramento genital em meninas até 8a11m29d",
+                    "type": "textarea",
+                    "ER": "ER1",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe o resultado dos seguintes exames, com datas: LH, FSH, estradiol, TSH, T4 livre, prolactina; ultrassonografia pélvica com relação corpo/colo; RX de mão e punho para idade óssea. Encaminhar à endócrino-pediatria, se necessário."
+                },
+                {
+                    "name": "propedeutica_minima_tumor_ginecologico",
+                    "label": "Tumor ginecológico (ovariano, uterino, vaginal, vulvar) em 0–19 anos",
+                    "type": "textarea",
+                    "ER": "ER7",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe o resultado e data da ultrassonografia pélvica (transvaginal, se possível)."
+                },
+                {
+                    "name": "propedeutica_minima_pelos_pubianos_e_ou_odor_axilar",
+                    "label": "Pelos pubianos e/ou odor axilar em meninas até 7a11m29d",
+                    "type": "textarea",
+                    "ER": "ER2",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe o resultado dos seguintes exames, com datas: LH, testosterona total e livre, 17-OH-progesterona, androstenediona, DHEA, SDHEA, cortisol basal; ultrassonografia pélvica; RX de mão e punho para idade óssea. Encaminhar à endócrino-pediatria, se necessário."
+                },
+                {
+                    "name": "propedeutica_minima_sangramento_genital_sem_caracteres_sexuais_secundarios",
+                    "label": "Sangramento genital sem desenvolvimento de caracteres sexuais secundários",
+                    "type": "textarea",
+                    "ER": "ER3",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe resultado e data da ultrassonografia pélvica."
+                },
+                {
+                    "name": "propedeutica_minima_sua_puberdade",
+                    "label": "SUA na puberdade que não resolveu com tratamento clínico por pelo menos 6 meses",
+                    "type": "textarea",
+                    "ER": "ER4",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe o resultado dos seguintes exames, com datas: Hemograma completo, TAP, TTPa, TSH, T4L e prolactina."
+                },
+                {
+                    "name": "propedeutica_minima_adolescentes_com_ist",
+                    "label": "Adolescentes com IST (exceto condilomatose e herpes)",
+                    "type": "textarea",
+                    "ER": "ER11",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe o resultado e data de exames laboratoriais de rotina para IST. Antes de encaminhar a paciente, tratar/iniciar tratamento e notificar, quando previsto."
+                },
+                {
+                    "name": "propedeutica_minima_dismenorreia_nao_responsiva",
+                    "label": "Dismenorreia não responsiva a AINE/antiespasmódicos em meninas < 19 anos",
+                    "type": "textarea",
+                    "ER": "ER5",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe resultado e data da ultrassonografia pélvica (transvaginal, se possível)."
+                },
+                {
+                    "name": "propedeutica_minima_sop_ou_alteracoes_androgenicas",
+                    "label": "SOP ou outras alterações androgênicas em meninas < 19 anos",
+                    "type": "textarea",
+                    "ER": "ER6",
+                    "categoria": "Categoria3",
+                    "hint": "Na presença desta condição, informe o resultado dos seguintes exames, com datas: Glicemia, insulina basal, lipidograma, TSH, prolactina, testosterona total e livre, 17-OH-progesterona, androstenediona, S-DHEA; ultrassonografia pélvica (transvaginal, se possível)."
+                },
+                {
+                    "name": "conteudo_encaminhamento_sinais_e_sintomas",
+                    "label": "Descrição de sinais e sintomas",
+                    "type": "textarea",
+                    "default": "Ao exame a paciente apresenta...",
+                    "ER": "ER1",
+                    "categoria": "Categoria4",
+                    "hint": "Inclua cronologia, tempo de evolução e demais informações relevantes."
+                },
+                {
+                    "name": "conteudo_encaminhamento_sangramento_genital_presente",
+                    "label": "Presença de sangramento genital",
+                    "type": "textarea",
+                    "default": "Paciente apresenta sangramento genital,...",
+                    "ER": "ER2",
+                    "categoria": "Categoria4",
+                    "hint": "Se houver sangramento, descreva características, tempo de evolução, história de trauma/abuso e outras informações relevantes."
+                },
+                {
+                    "name": "conteudo_encaminhamento_dismenorreia_presente",
+                    "label": "Presença de dismenorreia",
+                    "type": "textarea",
+                    "default": "Paciente apresenta dismenorreia,...",
+                    "ER": "ER3",
+                    "categoria": "Categoria4",
+                    "hint": "Se houver dismenorreia, descreva tempo desde o início, intensidade e padrão de dor."
+                },
+                {
+                    "name": "conteudo_encaminhamento_vulnerabilidade_social_ou_doença_psiquiatrica_presente",
+                    "label": "Presença de vulnerabilidade social ou doença psiquiátrica",
+                    "type": "textarea",
+                    "default": "Paciente apresenta doença psiquiátrica...",
+                    "ER": "ER4",
+                    "categoria": "Categoria4",
+                    "hint": "Se alguma destas condições estiver presentes, descreva a situação e o tratamento em curso, e encaminhe a paciente também para serviço social, psiquiatria ou psicologia (abordagem multiprofissional)."
+                },
+                {
+                    "name": "conteudo_encaminhamento_contracepção_com_comorbidades",
+                    "label": "Contracepção em adolescente com comorbidades",
+                    "type": "textarea",
+                    "default": "Paciente em contracepção com as seguintes comorbidades,...",
+                    "ER": "ER5",
+                    "categoria": "Categoria4",
+                    "hint": "Se esta condição estiver presente, descreva a data da menarca, cronologia do desenvolvimento puberal e acompanhamento/tratamento da patologia de base. Caso decida pelo DIU, informe também resultado e data de ultrassonografia pélvica (transvaginal, se possível)."
+                }
+            ]
+        },
+        {
+            "proc_id": "consulta_reproducao_humana_alta_complexidade_2018623",
+            "proc_label": "CONSULTA EM REPRODUCAO HUMANA  - ALTA COMPLEXIDADE (2018623)",
+            "proc_sisreg": "CONSULTA EM REPRODUCAO HUMANA  - ALTA COMPLEXIDADE (2018623)",
+            "NT_id": "nota-tecnica-ginecologia_e_obstetricia-4",
+            "NT_label": "Nota Técnica Nº 11/2023 - SES/SAIS/CATES/DUAEC",
+            "fields": [
+                {
+                    "name": "profissionais_autorizados",
+                    "label": "Os profissionais autorizados a solicitar este procedimento são: 1) Médicos dos ambulatórios especializados da atenção secundária (policlínicas e hospitais); 2) Médicos dos ambulatórios de ginecologia especializada vinculados às Unidades de Ginecologia e Obstetrícia (UGO)",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2"
+                    ],
+                    "categoria": "Categoria1"
+                },
+                {
+                    "name": "criterios_para_encaminhamento",
+                    "label": "Critérios mínimos para o encaminhamento",
+                    "type": "checkbox",
+                    "options": [
+                        "Atendimento prévio em ambulatório de Reprodução Humana da atenção secundária",
+                        "Idade da mulher inferior a 40 anos",
+                        "Infertilidade de causa estabelecida, após investigação e tratamento inicial sem sucesso na atenção secundária.",
+                        "Infertilidade sem causa aparente (ISCA), após investigação e tratamento inicial sem sucesso.",
+                        "Infertilidade por fator tubário",
+                        "Infertilidade por fator masculino (Vasectomia, azoospermia ou oligoastenozoospermia).",
+                        "Infertilidade em mulheres sem parceiro",
+                        "Infertilidade em casal homoafetivo."
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4",
+                        "ER5",
+                        "ER6",
+                        "ER7",
+                        "ER8"
+                    ],
+                    "categoria": "Categoria2",
+                    "hint": "Paciente precisa ser previamente avaliada em Ambulatório de Reprodução Humana da Atenção Secundária, ter menos de 40 anos e pelo menos uma das condições clínicas."
+                },
+                {
+                    "name": "condicoes_clinicas",
+                    "label": "Condições clínicas que justificam o encaminhamento e priorização.",
+                    "type": "checkbox",
+                    "options": [
+                        "Casal com infertilidade ≥ 1 ano e mulher com idade menor que 35 anos.",
+                        "Casal com infertilidade ≥ 6 meses e mulher com idade entre 35 e 39 anos",
+                        "Infertilidade com fator intransponível (tubáreo ou masculino) e mulher com idade menor que 40 anos."
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3"
+                    ],
+                    "categoria": "Categoria3",
+                    "hint": "No SISREG todas as pacientes devem ser classificadas como Prioridade 3 – Verde. O único critério de prioridade será a data de registro do encaminhamento."
+                },
+                {
+                    "name": "propedeutica_minima_obrigatoria",
+                    "label": "Propedêutica mínima obrigatória",
+                    "type": "checkbox",
+                    "options": [
+                        "Exames laboratoriais: Beta-hCG, FSH, LH, TSH, prolactina, hemograma, glicemia, lipidograma, testes hormonais conforme quadro clínico",
+                        "Exames de imagem: Ultrassonografia pélvica/transvaginal com contagem de folículos antrais; histerossalpingografia, quando for o caso",
+                        "Colpocitologia Oncótica (CCO) preventiva recente, colhida há menos de 1 ano.",
+                        "Espermograma e espermocultura (coleta entre 2 a 7 dias de abstinência sexual), inclusive em homens vasectomizados."
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4"
+                    ],
+                    "categoria": "Categoria4",
+                    "hint": "Exames exigidos para aceite do encaminhamento."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exames_realizados",
+                    "label": "Resultados dos exames da propedêutica mínima com data",
+                    "type": "textarea",
+                    "default": "Resultado de hemograma realizado em DD/MM/AAAA...",
+                    "ER": "ER6",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever nome, data e principais achados dos exames já realizados."
+                },
+                {
+                    "name": "conteudo_encaminhamento_sinais_sintomas",
+                    "label": "Sinais e sintomas",
+                    "type": "textarea",
+                    "default": "Paciente apresenta...",
+                    "ER": "ER1",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever tempo de infertilidade e evolução, informações relevantes."
+                },
+                {
+                    "name": "conteudo_encaminhamento_historia_paciente",
+                    "label": "História da paciente",
+                    "type": "textarea",
+                    "default": "Paciente com...",
+                    "ER": "ER2",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever idade, início dos sintomas, início da infertilidade, padrão menstrual."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exame_fisico",
+                    "label": "Exame físico",
+                    "type": "textarea",
+                    "default": "Paciente apresenta...",
+                    "ER": "ER3",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever resultado do exame físico, incluindo: pressão arterial, frequência cardíaca, circunferência abdominal, peso, altura, IMC, exame ginecológico completo e exame das mamas."
+                },
+                {
+                    "name": "conteudo_encaminhamento_cirurgias_previas",
+                    "label": "Relatórios de cirurgias prévias",
+                    "type": "textarea",
+                    "default": "Paciente realizou...",
+                    "ER": "ER5",
+                    "categoria": "Categoria5",
+                    "hint": "Incluindo informações do relatório do médico que realizou, se disponível."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exames_realizados",
+                    "label": "Tratamentos prévios para infertilidade",
+                    "type": "textarea",
+                    "default": "Paciente faz uso de medicamento 500mg 1x ao dia...",
+                    "ER": "ER4",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever medicamentos utilizados, posologia e tempo de uso."
+                }
+            ]
+        },
+        {
+            "proc_id": "consulta_ginecologia_endometriose_profunda_2018857",
+            "proc_label": "CONSULTA EM GINECOLOGIA - ENDOMETRIOSE PROFUNDA (2018857)",
+            "proc_sisreg": "CONSULTA EM GINECOLOGIA - ENDOMETRIOSE PROFUNDA (2018857)",
+            "NT_id": "nota-tecnica-ginecologia_e_obstetricia-4",
+            "NT_label": "Nota Técnica Nº 11/2023 - SES/SAIS/CATES/DUAEC",
+            "fields": [
+                {
+                    "name": "profissionais_autorizados",
+                    "label": "Profissionais autorizados a solicitar este procedimento: 1) Médicos dos ambulatórios especializados da atenção secundária (policlínicas e hospitais); 2) Médicos dos ambulatórios de ginecologia especializada vinculados às Unidades de Ginecologia e Obstetrícia (UGO)",
+                    "type": "label",
+                    "ER": [
+                        "ER1",
+                        "ER2"
+                    ],
+                    "categoria": "Categoria1"
+                },
+                {
+                    "name": "classificacao_risco_vermelha",
+                    "label": "Critérios para classificação de risco Prioridade 1 - Vermelha: Endometriose profunda infiltrativa com estreitamento de retossigmoide OU hidronefrose por obstrução de ureter OU dor intensa sem resposta à analgesia oral.",
+                    "type": "label",
+                    "ER": "ER1",
+                    "categoria": "Categoria3",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 1 - Vermelha"
+                },
+                {
+                    "name": "classificacao_risco_amarela",
+                    "label": "Critérios para classificação de risco Prioridade 2 - Amarela: Endometriose profunda infiltrativa com comprometimento intestinal ou urinário sem estreitamento/obstrução OU dor leve/moderada.",
+                    "type": "label",
+                    "ER": "ER2",
+                    "categoria": "Categoria3",
+                    "hint": "Critérios clínicos estabelecidos pela NT para classificação de risco do encaminhamento como Prioridade 2 - Amarela"
+                },
+                {
+                    "name": "criterios_para_encaminhamento",
+                    "label": "Critérios mínimos para o encaminhamento",
+                    "type": "checkbox",
+                    "options": [
+                        "N80.3 - Endometriose do peritônio pélvico (comprometendo o sistema urinário)",
+                        "N80.4 - Endometriose de septo retovaginal e da vagina",
+                        "N80.5 - Endometriose de intestino",
+                        "80.8 - Outra endometriose (comprometendo o sistema urinário)"
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4"
+                    ],
+                    "categoria": "Categoria2",
+                    "hint": "Paciente precisa ser previamente avaliada nos ambulatórios de Dor Pélvica Crônica (DPC) e Endometriose da Atenção Ambulatorial Secundária (AASE) e ter diagnóstico de endometriose profunda confirmado por exames de imagem."
+                },
+                {
+                    "name": "conteudo_encaminhamento_sinais_sintomas",
+                    "label": "Sinais e sintomas",
+                    "type": "textarea",
+                    "default": "Paciente apresenta...",
+                    "ER": "ER1",
+                    "categoria": "Categoria5",
+                    "hint": "Descrição do hábito intestinal e urinário, atividade física, laboral e informações relevantes."
+                },
+                {
+                    "name": "propedeutica_minima_obrigatoria",
+                    "label": "Propedêutica mínima obrigatória, além do exame ginecológico completo.",
+                    "type": "checkbox",
+                    "options": [
+                        "Exame sumário de urina (EAS) e urocultura, com data.",
+                        "Ultrassonografia pélvica ou transvaginal na primeira fase precoce do ciclo, com data.",
+                        "Teste imunológico para gravidez (preferencialmente beta-HCG) e hemograma completo, com data.",
+                        "Colpocitologia oncótica (CCO) preventiva colhida há menos de 1 ano.",
+                        "Ultrassonografia transvaginal de mapeamento para endometriose OU ressonância magnética, com data",
+                        "Colonoscopia ou cistoscopia (se houver), com data",
+                        "Ultrassonografia de abdômen total, com data",
+                        "Mulheres no menacme: Beta-HCG, TSH, FSH, Prolactina."
+                    ],
+                    "ER": [
+                        "ER1",
+                        "ER2",
+                        "ER3",
+                        "ER4",
+                        "ER5",
+                        "ER6",
+                        "ER7",
+                        "ER8"
+                    ],
+                    "categoria": "Categoria4",
+                    "hint": "Exames exigidos para aceite do encaminhamento."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exames_realizados",
+                    "label": "Resultados dos exames da propedêutica mínima com data",
+                    "type": "textarea",
+                    "default": "Resultado de ultrassonografia transvaginal de mapeamento para endometriose realizada em DD/MM/AAAA...",
+                    "ER": "ER5",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever nome, data e principais achados de exames já realizados, principalmente exames de imagem."
+                },
+                {
+                    "name": "conteudo_encaminhamento_cirurgias_previas",
+                    "label": "Relatórios de cirurgias prévias",
+                    "type": "textarea",
+                    "default": "Paciente realizou...",
+                    "ER": "ER2",
+                    "categoria": "Categoria5",
+                    "hint": "Relatórios de procedimentos realizados, como laparotomia ou laparoscopia, se houver."
+                },
+                {
+                    "name": "conteudo_encaminhamento_exame_fisico",
+                    "label": "Exame físico",
+                    "type": "textarea",
+                    "default": "Paciente apresenta...",
+                    "ER": "ER3",
+                    "categoria": "Categoria5",
+                    "hint": "Descrever resultado do exame físico geral e ginecológico da paciente, incluindo exame da genitália, especular, toque vaginal e mamas."
+                },
+                {
+                    "name": "conteudo_encaminhamento_fase_reprodutiva",
+                    "label": "Fase reprodutiva da mulher",
+                    "type": "select",
+                    "options": [
+                        "Menacme",
+                        "Perimenopausa",
+                        "Pós-menopausa"
+                    ],
+                    "ER": "ER4",
+                    "categoria": "Categoria5"
+                },
+                {
+                    "name": "conteudo_encaminhamento_tratamentos_realizados",
+                    "label": "Tratamentos em uso ou já realizados para DPC",
+                    "type": "textarea",
+                    "default": "Paciente faz uso de medicamento 500mg 1x ao dia...",
+                    "ER": "ER6",
+                    "categoria": "Categoria5",
+                    "hint": "Incluir medicamentos utilizados, posologia e tempo de uso"
+                }
+            ]
+        }
+    ]
+}
