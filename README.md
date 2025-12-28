@@ -170,14 +170,16 @@ Legenda: Interface de acesso seguro com autenticação baseada em JSON Web Token
 Legenda: Painel central de navegação desenvolvido em React. Esta tela organiza o fluxo de trabalho do médico, permitindo acesso rápido aos módulos de solicitações e ao fluxo de regulação inteligente.
 
 <img width="1006" height="332" alt="image" src="https://github.com/user-attachments/assets/cf150b5d-fd56-44c8-b847-8ce0854d6441" />
-3. Histórico de Solicitações (Módulo FillSense)
+3. Módulo RegulaFlow
 
-Legenda: Visualização dinâmica das solicitações médicas armazenadas no PostgreSQL. A tabela consome dados via API REST e exibe o status em tempo real, permitindo a triagem rápida de pedidos.
+Legenda: Visualização do fluxo de regulação assistida. Esta interface foca na usabilidade (UX), permitindo que o utilizador visualize em qual etapa do processo técnico a solicitação se encontra.
 
 <img width="759" height="539" alt="image" src="https://github.com/user-attachments/assets/5ff27793-5171-4d2e-baa0-7b3d85d42542" />
-
+4. Legenda: Visualização dinâmica das solicitações médicas armazenadas no PostgreSQL. A tabela consome dados via API REST e exibe o status em tempo real, permitindo a triagem rápida de pedidos.Módulo inteligente para criação de pedidos médicos. O formulário inclui validações complexas, como o Número do SUS, e prepara os dados em formato JSON para processamento no backend Django.
 
 <img width="1357" height="117" alt="image" src="https://github.com/user-attachments/assets/3a29d12c-d7fe-4036-94d8-fefed253b62e" />
+5. Rodapé e Identidade Visual (Footer)
+Legenda: Componente de rodapé modular que integra as informações de contacto e a marca institucional do CIIA, reforçando a seriedade e o caráter académico-profissional do projeto.
 
 
 
