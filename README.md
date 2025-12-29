@@ -158,37 +158,67 @@ Frontend: http://localhost:3000
 
 Backend: http://localhost:8000
 ```
-### 📸 Demonstração
-<img width="1364" height="612" alt="image" src="https://github.com/user-attachments/assets/134d507f-75b8-4c7a-b54d-45dd2cc5de6d" />
+<h2>📸 Galeria de Funcionalidades</h2>
 
-1. Tela de Login e Autenticação
+<table border="0">
+  <tr>
+    <td width="40%">
+      <h3 align="center">🔐 Autenticação Segura</h3>
+      <p align="justify">
+        Interface de acesso robusta baseada em <strong>JWT (JSON Web Tokens)</strong>. 
+        <br><br>
+        O sistema valida credenciais diretamente no microserviço de usuários, garantindo que apenas médicos e profissionais autorizados acessem dados sensíveis dos pacientes.
+      </p>
+    </td>
+    <td width="60%">
+      <img src="https://github.com/user-attachments/assets/134d507f-75b8-4c7a-b54d-45dd2cc5de6d" width="100%" alt="Tela de Login">
+    </td>
+  </tr>
 
-Legenda: Interface de acesso seguro com autenticação baseada em JSON Web Tokens (JWT). O sistema valida o e-mail e senha junto ao microserviço de usuários, garantindo que apenas profissionais autorizados acessem os dados sensíveis.
+  <tr>
+    <td width="60%">
+      <img src="https://github.com/user-attachments/assets/89f1920e-66bf-4a6a-a990-0622d4e475fe" width="100%" alt="Dashboard Home">
+    </td>
+    <td width="40%">
+      <h3 align="center">🏠 Dashboard Central</h3>
+      <p align="justify">
+        O painel de controle foi desenhado para agilidade.
+        <br><br>
+        Aqui, o profissional de saúde visualiza rapidamente os módulos de <strong>Solicitações</strong> e o fluxo inteligente do <strong>RegulaFlow</strong>, otimizando a triagem diária.
+      </p>
+    </td>
+  </tr>
 
-<img width="1350" height="611" alt="image" src="https://github.com/user-attachments/assets/89f1920e-66bf-4a6a-a990-0622d4e475fe" />
-
-2. Dashboard Principal (Home)
-
-Legenda: Painel central de navegação desenvolvido em React. Esta tela organiza o fluxo de trabalho do médico, permitindo acesso rápido aos módulos de solicitações e ao fluxo de regulação inteligente.
-
-<img width="1006" height="332" alt="image" src="https://github.com/user-attachments/assets/cf150b5d-fd56-44c8-b847-8ce0854d6441" />
-
-3. Módulo RegulaFlow
-
-Legenda: Visualização do fluxo de regulação assistida. Esta interface foca na usabilidade (UX), permitindo que o utilizador visualize em qual etapa do processo técnico a solicitação se encontra.
-
-<img width="759" height="539" alt="image" src="https://github.com/user-attachments/assets/5ff27793-5171-4d2e-baa0-7b3d85d42542" />
-
-4. Histórico de Solicitações (Módulo FillSense)
-
-Legenda: Visualização dinâmica das solicitações médicas armazenadas no PostgreSQL. A tabela consome dados via API REST e exibe o status em tempo real, permitindo a triagem rápida de pedidos.Módulo inteligente para criação de pedidos médicos. O formulário inclui validações complexas, como o Número do SUS, e prepara os dados em formato JSON para processamento no backend Django.
-
-<img width="1357" height="117" alt="image" src="https://github.com/user-attachments/assets/3a29d12c-d7fe-4036-94d8-fefed253b62e" />
-
-5. Rodapé e Identidade Visual (Footer)
-
-Legenda: Componente de rodapé modular que integra as informações de contacto e a marca institucional do CIIA, reforçando a seriedade e o caráter académico-profissional do projeto.
-
+  <tr>
+    <td width="40%">
+      <h3 align="center">🧠 RegulaFlow & Histórico</h3>
+      <p align="justify">
+        <strong>Foco em UX:</strong> Visualização clara da etapa técnica de cada solicitação (imagem superior).
+        <br><br>
+        <strong>Gestão de Dados:</strong> Tabela dinâmica conectada ao PostgreSQL (imagem inferior) que permite triagem rápida e monitoramento de status em tempo real.
+      </p>
+    </td>
+    <td width="60%">
+      <img src="https://github.com/user-attachments/assets/cf150b5d-fd56-44c8-b847-8ce0854d6441" width="100%" alt="RegulaFlow">
+      <br><br>
+      <img src="https://github.com/user-attachments/assets/5ff27793-5171-4d2e-baa0-7b3d85d42542" width="100%" alt="Histórico">
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="60%">
+      <img src="https://github.com/user-attachments/assets/3a29d12c-d7fe-4036-94d8-fefed253b62e" width="100%" alt="Footer">
+    </td>
+    <td width="40%">
+      <h3 align="center">🎨 Identidade Profissional</h3>
+      <p align="justify">
+        Rodapé modular que reforça a marca institucional do <strong>CIIA</strong>.
+        <br><br>
+        Integra links de contato e redes sociais, mantendo a seriedade e o caráter acadêmico-profissional do projeto até o final da rolagem.
+      </p>
+    </td>
+  </tr>
+</table>
 
 
 
