@@ -175,6 +175,7 @@ Legenda: Painel central de navegação desenvolvido em React. Esta tela organiza
 Legenda: Visualização do fluxo de regulação assistida. Esta interface foca na usabilidade (UX), permitindo que o utilizador visualize em qual etapa do processo técnico a solicitação se encontra.
 
 <img width="759" height="539" alt="image" src="https://github.com/user-attachments/assets/5ff27793-5171-4d2e-baa0-7b3d85d42542" />
+
 4. Histórico de Solicitações (Módulo FillSense)
 
 Legenda: Visualização dinâmica das solicitações médicas armazenadas no PostgreSQL. A tabela consome dados via API REST e exibe o status em tempo real, permitindo a triagem rápida de pedidos.Módulo inteligente para criação de pedidos médicos. O formulário inclui validações complexas, como o Número do SUS, e prepara os dados em formato JSON para processamento no backend Django.
