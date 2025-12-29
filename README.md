@@ -158,16 +158,14 @@ Frontend: http://localhost:3000
 
 Backend: http://localhost:8000
 ```
-<h2>📸 Galeria de Funcionalidades</h2>
-
 <table border="0">
   <tr>
     <td width="40%">
       <h3 align="center">🔐 Autenticação Segura</h3>
       <p align="justify">
-        Interface de acesso robusta baseada em <strong>JWT (JSON Web Tokens)</strong>. 
+        Interface de acesso robusta baseada em <strong>JWT</strong>. 
         <br><br>
-        O sistema valida credenciais diretamente no microserviço de usuários, garantindo que apenas médicos e profissionais autorizados acessem dados sensíveis dos pacientes.
+        O sistema valida credenciais diretamente no microserviço de usuários, garantindo segurança total aos dados dos pacientes.
       </p>
     </td>
     <td width="60%">
@@ -182,44 +180,55 @@ Backend: http://localhost:8000
     <td width="40%">
       <h3 align="center">🏠 Dashboard Central</h3>
       <p align="justify">
-        O painel de controle foi desenhado para agilidade.
+        O painel de controle otimizado para agilidade.
         <br><br>
-        Aqui, o profissional de saúde visualiza rapidamente os módulos de <strong>Solicitações</strong> e o fluxo inteligente do <strong>RegulaFlow</strong>, otimizando a triagem diária.
+        Permite acesso rápido aos módulos de Solicitações e ao fluxo inteligente do RegulaFlow.
       </p>
     </td>
   </tr>
 
   <tr>
     <td width="40%">
-      <h3 align="center">🧠 RegulaFlow & Histórico</h3>
+      <h3 align="center">🧠 RegulaFlow</h3>
       <p align="justify">
-        <strong>Foco em UX:</strong> Visualização clara da etapa técnica de cada solicitação (imagem superior).
+        <strong>Foco em UX:</strong><br>
+        Interface desenhada para mostrar claramente em qual etapa técnica a solicitação se encontra.
         <br><br>
-        <strong>Gestão de Dados:</strong> Tabela dinâmica conectada ao PostgreSQL (imagem inferior) que permite triagem rápida e monitoramento de status em tempo real.
+        O sistema de "Devoluções" facilita o entendimento do fluxo de regulação.
       </p>
     </td>
     <td width="60%">
       <img src="https://github.com/user-attachments/assets/cf150b5d-fd56-44c8-b847-8ce0854d6441" width="100%" alt="RegulaFlow">
-      <br><br>
-      <img src="https://github.com/user-attachments/assets/5ff27793-5171-4d2e-baa0-7b3d85d42542" width="100%" alt="Histórico">
+    </td>
+  </tr>
+
+  <tr>
+    <td width="60%">
+      <img src="https://github.com/user-attachments/assets/5ff27793-5171-4d2e-baa0-7b3d85d42542" width="100%" alt="Módulo FillSense">
+    </td>
+    <td width="40%">
+      <h3 align="center">📝 FillSense (Solicitações)</h3>
+      <p align="justify">
+        <strong>Formulários Inteligentes:</strong><br>
+        Módulo para criação de pedidos médicos com validações complexas (como número do SUS).
+        <br><br>
+        Os dados são processados e enviados em JSON para o backend Django com segurança.
+      </p>
     </td>
   </tr>
   
   <tr>
+    <td width="40%">
+      <h3 align="center">🎨 Identidade Visual</h3>
+      <p align="justify">
+        Rodapé modular que reforça a marca institucional do <strong>CIIA</strong> e contém links de contato.
+      </p>
+    </td>
     <td width="60%">
       <img src="https://github.com/user-attachments/assets/3a29d12c-d7fe-4036-94d8-fefed253b62e" width="100%" alt="Footer">
     </td>
-    <td width="40%">
-      <h3 align="center">🎨 Identidade Profissional</h3>
-      <p align="justify">
-        Rodapé modular que reforça a marca institucional do <strong>CIIA</strong>.
-        <br><br>
-        Integra links de contato e redes sociais, mantendo a seriedade e o caráter acadêmico-profissional do projeto até o final da rolagem.
-      </p>
-    </td>
   </tr>
 </table>
-
 
 
 
