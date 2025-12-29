@@ -158,6 +158,9 @@ Frontend: http://localhost:3000
 
 Backend: http://localhost:8000
 ```
+
+---
+
 <h2>📸 Galeria de Funcionalidades</h2>
 <table border="0">
   <tr>
